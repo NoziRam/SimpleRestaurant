@@ -1,4 +1,3 @@
-C:\Users\Sumsung\source\repos\SimpleRestaurantSimulation\RestauranSimulation_2\obj\Debug\net5.0-windows\RestaurantSimulation_2.csproj.AssemblyReference.cache
 C:\Users\Sumsung\source\repos\SimpleRestaurantSimulation\RestauranSimulation_2\obj\Debug\net5.0-windows\RestauranSimulation_2.Form1.resources
 C:\Users\Sumsung\source\repos\SimpleRestaurantSimulation\RestauranSimulation_2\obj\Debug\net5.0-windows\RestaurantSimulation_2.csproj.GenerateResource.cache
 C:\Users\Sumsung\source\repos\SimpleRestaurantSimulation\RestauranSimulation_2\obj\Debug\net5.0-windows\RestaurantSimulation_2.GeneratedMSBuildEditorConfig.editorconfig

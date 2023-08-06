@@ -33,6 +33,7 @@ namespace RestauranSimulation_2
              int eggQuantity = Convert.ToInt32(textBox2.Text);
              string drink = comboBox1.Text;
              Clear();
+             server.ReceiveRequests(chickenQuantity, eggQuantity, drink);
             }
             catch (Exception ex)
             {
@@ -55,8 +56,16 @@ namespace RestauranSimulation_2
         }
 
         private void button3_Click(object sender, EventArgs e)
-        { 
-        
+        {
+            try
+            {
+                textBox3.Text += server.Serve();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         
         }
         private void Clear()

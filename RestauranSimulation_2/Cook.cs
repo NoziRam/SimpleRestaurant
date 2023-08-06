@@ -47,7 +47,7 @@ namespace RestaurantSimulation_2
             return null;
         }
 
-        private int? GetMidQuality(int[] qualities)
+      int? GetMidQuality(int[] qualities)
         {
             int sum = 0;
             foreach (var quality in qualities)

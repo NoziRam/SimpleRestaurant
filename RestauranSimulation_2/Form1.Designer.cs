@@ -69,6 +69,7 @@ namespace RestauranSimulation_2
             this.button3.TabIndex = 8;
             this.button3.Text = "Serve prepared food to the Customers";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -78,6 +79,7 @@ namespace RestauranSimulation_2
             this.button2.TabIndex = 7;
             this.button2.Text = "Send all Customer requests to the Cook";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
@@ -124,19 +126,17 @@ namespace RestauranSimulation_2
             this.button1.Text = "Receive this request from a Customer";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 60);
+            this.textBox2.Location = new System.Drawing.Point(123, 52);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(44, 23);
             this.textBox2.TabIndex = 3;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 17);
+            this.textBox1.Location = new System.Drawing.Point(123, 20);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(44, 23);
             this.textBox1.TabIndex = 2;
@@ -144,7 +144,7 @@ namespace RestauranSimulation_2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 63);
+            this.label2.Location = new System.Drawing.Point(3, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 15);
             this.label2.TabIndex = 1;
@@ -153,7 +153,7 @@ namespace RestauranSimulation_2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 20);
+            this.label1.Location = new System.Drawing.Point(3, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 15);
             this.label1.TabIndex = 0;

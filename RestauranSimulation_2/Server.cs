@@ -37,6 +37,7 @@ namespace RestaurantSimulation_2
 
             Enum.TryParse<MenuItem>(drinkName, out MenuItem drink);
             request[request.Length - 1] = drink;
+            
             requests[counter] = request;
             counter++;
             weHaveRequest = true;
@@ -45,7 +46,7 @@ namespace RestaurantSimulation_2
         {
             if (weHaveRequest)
             {
-                int checken_count = 0;
+                int chicken_count = 0;
                 int egg_count = 0;
                 foreach (var request in requests)
                 {
@@ -55,7 +56,7 @@ namespace RestaurantSimulation_2
                         {
                             if (item is MenuItem.ChickenOrder)
                             {
-                                checken_count++;
+                                chicken_count++;
                             }
                             else if (item is MenuItem.EggOrder) egg_count++;
                         }
@@ -63,7 +64,7 @@ namespace RestaurantSimulation_2
                 }
                 cook.SubmitRequestforFood(MenuItem.EggOrder, egg_count);
                 int? eggQuality = cook.PrepareFood();
-                cook.SubmitRequestforFood(MenuItem.ChickenOrder, checken_count);
+                cook.SubmitRequestforFood(MenuItem.ChickenOrder, chicken_count);
                 cook.PrepareFood();
                 requestsAreSent = true;
                 return eggQuality;
@@ -89,7 +90,7 @@ namespace RestaurantSimulation_2
                             else if (item is MenuItem.ChickenOrder) chickenCount++;
                             else drinkName = item.ToString();
                         }
-                        result.AppendLine($"Costomer{counter} is served {eggCount} Egg, {chickenCount} Chicken and a {drinkName}");
+                        result.AppendLine($"Costomer{counter} is served  {chickenCount} Chicken, {eggCount} Egg and a {drinkName}");
                         counter++;
                     }
                 }
