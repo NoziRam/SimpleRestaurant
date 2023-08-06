@@ -30,118 +30,123 @@ namespace RestaurantSimulation_1
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButtonEgg = new System.Windows.Forms.RadioButton();
-            this.radioButtonChicken = new System.Windows.Forms.RadioButton();
-            this.buttonSubmitRequest = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.buttonCopyRequest = new System.Windows.Forms.Button();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.buttonPrepareFood = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.radioButtonEgg);
-            this.panel1.Controls.Add(this.radioButtonChicken);
-            this.panel1.Location = new System.Drawing.Point(13, 13);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Location = new System.Drawing.Point(42, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 47);
+            this.panel1.Size = new System.Drawing.Size(229, 65);
             this.panel1.TabIndex = 0;
-            // 
-            // radioButtonEgg
-            // 
-            this.radioButtonEgg.AutoSize = true;
-            this.radioButtonEgg.Location = new System.Drawing.Point(114, 14);
-            this.radioButtonEgg.Name = "radioButtonEgg";
-            this.radioButtonEgg.Size = new System.Drawing.Size(45, 19);
-            this.radioButtonEgg.TabIndex = 1;
-            this.radioButtonEgg.TabStop = true;
-            this.radioButtonEgg.Text = "Egg";
-            this.radioButtonEgg.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonChicken
-            // 
-            this.radioButtonChicken.AutoSize = true;
-            this.radioButtonChicken.Location = new System.Drawing.Point(13, 15);
-            this.radioButtonChicken.Name = "radioButtonChicken";
-            this.radioButtonChicken.Size = new System.Drawing.Size(68, 19);
-            this.radioButtonChicken.TabIndex = 0;
-            this.radioButtonChicken.TabStop = true;
-            this.radioButtonChicken.Text = "Chicken";
-            this.radioButtonChicken.UseVisualStyleBackColor = true;
-            // 
-            // buttonSubmitRequest
-            // 
-            this.buttonSubmitRequest.Location = new System.Drawing.Point(148, 78);
-            this.buttonSubmitRequest.Name = "buttonSubmitRequest";
-            this.buttonSubmitRequest.Size = new System.Drawing.Size(131, 23);
-            this.buttonSubmitRequest.TabIndex = 0;
-            this.buttonSubmitRequest.Text = "Submit new request";
-            this.buttonSubmitRequest.UseVisualStyleBackColor = true;
-            this.buttonSubmitRequest.Click += new System.EventHandler(this.buttonSubmitRequest_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 79);
+            this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Quantity";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Menu";
             // 
-            // textBox1
+            // radioButton2
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(59, 23);
-            this.textBox1.TabIndex = 2;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(150, 29);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(45, 19);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Egg";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // buttonCopyRequest
+            // radioButton1
             // 
-            this.buttonCopyRequest.Location = new System.Drawing.Point(13, 128);
-            this.buttonCopyRequest.Name = "buttonCopyRequest";
-            this.buttonCopyRequest.Size = new System.Drawing.Size(266, 23);
-            this.buttonCopyRequest.TabIndex = 3;
-            this.buttonCopyRequest.Text = "Copy the previous request";
-            this.buttonCopyRequest.UseVisualStyleBackColor = true;
-            this.buttonCopyRequest.Click += new System.EventHandler(this.buttonCopyRequest_Click);
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(60, 29);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(68, 19);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Chicken";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 175);
+            this.label2.Location = new System.Drawing.Point(42, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Egg Quality:  ";
+            this.label2.Size = new System.Drawing.Size(53, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Quantity";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(102, 94);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(35, 23);
+            this.textBox1.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(160, 93);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Submit new request";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(45, 150);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(259, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Copy the previous request";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(97, 175);
+            this.label3.Location = new System.Drawing.Point(12, 186);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 15);
+            this.label3.Size = new System.Drawing.Size(77, 15);
             this.label3.TabIndex = 5;
+            this.label3.Text = "Egg Quality:  ";
             // 
-            // buttonPrepareFood
+            // button3
             // 
-            this.buttonPrepareFood.Location = new System.Drawing.Point(13, 216);
-            this.buttonPrepareFood.Name = "buttonPrepareFood";
-            this.buttonPrepareFood.Size = new System.Drawing.Size(266, 23);
-            this.buttonPrepareFood.TabIndex = 6;
-            this.buttonPrepareFood.Text = "Prepare Food";
-            this.buttonPrepareFood.UseVisualStyleBackColor = true;
-            this.buttonPrepareFood.Click += new System.EventHandler(this.buttonPrepareFood_Click);
+            this.button3.Location = new System.Drawing.Point(42, 213);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(262, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Prepare Food";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 261);
+            this.label4.Location = new System.Drawing.Point(45, 255);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 15);
             this.label4.TabIndex = 7;
@@ -149,29 +154,38 @@ namespace RestaurantSimulation_1
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(13, 288);
+            this.textBox2.Location = new System.Drawing.Point(45, 273);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(266, 105);
+            this.textBox2.Size = new System.Drawing.Size(259, 90);
             this.textBox2.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(112, 186);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 15);
+            this.label5.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(302, 420);
+            this.ClientSize = new System.Drawing.Size(338, 391);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.buttonPrepareFood);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.buttonCopyRequest);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonSubmitRequest);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
-            this.Text = "RestaurantSimulation_1";
+            this.Text = "My Restaurant";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -182,17 +196,18 @@ namespace RestaurantSimulation_1
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton radioButtonEgg;
-        private System.Windows.Forms.RadioButton radioButtonChicken;
-        private System.Windows.Forms.Button buttonSubmitRequest;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button buttonCopyRequest;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button buttonPrepareFood;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label5;
     }
 }
 

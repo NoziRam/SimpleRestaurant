@@ -12,57 +12,53 @@ namespace RestaurantSimulation_1
 {
     public partial class Form1 : Form
     {
-        
-        Employee employee = new Employee();
-        private object order;
+
+        string menuItem;
+        object order;
+        Employee employee;
 
         public Form1()
         {
             InitializeComponent();
         }
-        
-        private void buttonSubmitRequest_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            order = new object();
+            employee = new Employee();
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            menuItem = ((RadioButton)sender).Text;
+        }
+        private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 int quantity = Convert.ToInt32(textBox1.Text);
-                string menuItem;
-                if (radioButtonChicken.Checked)
-                {
-                    menuItem = "Chicken";
-                }
-                else if (radioButtonEgg.Checked)
-                    menuItem = "Egg";
-                else throw new Exception("Xurokaro intihkob namoed!");
-                            
-                employee.NewRequest(quantity,menuItem);
-                label3.Text = employee.Inspect();
+
+                order = employee.NewRequest(quantity, menuItem);
+                label5.Text = employee.Inspect();
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
-            
-        }
 
-        private void buttonCopyRequest_Click(object sender, EventArgs e)
+        }
+        private void button2_Click(object sender, EventArgs e)
         {
             try
             {
-                employee.CopyRequest();
-                label3.Text = employee.Inspect();
+                order = employee.CopyRequest();
+                label5.Text = employee.Inspect();
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
-            
-
         }
-
-        private void buttonPrepareFood_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             try
             {
@@ -70,15 +66,8 @@ namespace RestaurantSimulation_1
             }
             catch (Exception ex)
             {
-               MessageBox.Show(ex.Message);
-                
+                MessageBox.Show(ex.Message);
             }
-           
-        }
-
-        private void radioButtonChicken_CheckedChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }

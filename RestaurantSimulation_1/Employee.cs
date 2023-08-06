@@ -4,9 +4,11 @@ namespace RestaurantSimulation_1
 {
     public class Employee
     {
+        
         int generate;
         object order;
-        private int quantity;
+        bool weHaveOrder = false;
+        bool newRequestCalled = false;
 
         public Employee()
         {
@@ -15,66 +17,88 @@ namespace RestaurantSimulation_1
         public object NewRequest(int quantity, string menuItem)
         {
             generate++;
-            if (menuItem == "Chicken")
+            weHaveOrder = true;
+            newRequestCalled = true;
+            if (generate % 3 == 0)
             {
-                if (generate % 3 == 0)
+                if (menuItem == "Egg")
                 {
-                    return order = new EggOrder(quantity);
+                    menuItem = "Chicken";
                 }
-                return order = new ChickenOrder(quantity);
+                else menuItem = "Egg";
             }
-            else if (menuItem == "Egg")
+
+            if (menuItem == "Egg")
             {
-                if (generate % 3 == 0)
-                {
-                    return order = new ChickenOrder(quantity);
-                }
-                return order = new EggOrder(quantity);
+                order = new EggOrder(quantity);
             }
-            else throw new Exception("Zakaz nest");
+            else
+            {
+                order = new ChickenOrder(quantity);
+            }
+            return order;
         }
         public object CopyRequest()
         {
 
+            if (!newRequestCalled)
+                throw new Exception("You have no requests");
+
             if (order is ChickenOrder)
+            {
+                weHaveOrder = true;
                 return new ChickenOrder(((ChickenOrder)order).GetQuantity());
-            else if (order is EggOrder)
+            }
+            else
+            {
+                weHaveOrder = true;
                 return new EggOrder(((EggOrder)order).GetQuantity());
-            else throw new Exception("Baroi takror zakaz nest");
+            }
 
         }
         public string Inspect()
         {
+            if (!weHaveOrder)
+                throw new Exception("First order please");
+
             if (order is EggOrder)
             {
                 return ((EggOrder)order).GetQuality().ToString();
             }
-            else return "no inspection is required";
+            return "no inspection is required";
         }
         public string PrepareFood(object order)
         {
 
+            if (!weHaveOrder)
+                throw new Exception("First order please");
+
             if (order is ChickenOrder)
             {
+                ChickenOrder ordered = (ChickenOrder)order;
+                int quantity = ordered.GetQuantity();
                 for (int i = 0; i < quantity; i++)
                 {
                     ((ChickenOrder)order).CutUp();
                 }
-                   ((ChickenOrder)order).Cook();
-                return $"Order is Chicken, quantity:{quantity}";
+                ordered.Cook();
+                weHaveOrder = false;
+                return $"Order: Chicken Quantity: {quantity} completed";
             }
-            else if (order is EggOrder)
+            else
             {
+                EggOrder ordered = (EggOrder)order;
+                int quantity = ordered.GetQuantity();
+
                 for (int i = 0; i < quantity; i++)
                 {
-                    ((EggOrder)order).Crack();
-                    ((EggOrder)order).DiscardShell();
+                    ordered.Crack();
+                    ordered.DiscardShell();
                 }
-                ((EggOrder)order).Cook();
-
-                return $"Order is Egg, quantity:{quantity}";
+                ordered.Cook();
+                weHaveOrder = false;
+                return $"Order: Egg Quantity: {quantity} completed";
             }
-            else throw new Exception("Marhamad zakaz kuned");
         }
     }
 }
