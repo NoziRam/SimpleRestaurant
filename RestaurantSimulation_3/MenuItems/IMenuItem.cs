@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace RestaurantSimulation_3.MenuItems
 {
-    interface IMenuItem
+    public interface IMenuItem
     {
+        public void Obtain() { }
+        public string Serve() { return ""; }
     }
 }

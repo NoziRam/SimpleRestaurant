@@ -1,12 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using RestaurantSimulation_3.MenuItems;
 
 namespace RestaurantSimulation_3
 {
-    class TableRequests
+    public class TableRequests
     {
+        IMenuItem [][] requests = new IMenuItem[8][];
+        public int Length
+        { 
+            get
+            {
+                return requests.Length;
+            }
+        }
+        IMenuItem[] singleRequest = new IMenuItem[0];
+        public void Add()
+        { 
+        
+        }
     }
 }
