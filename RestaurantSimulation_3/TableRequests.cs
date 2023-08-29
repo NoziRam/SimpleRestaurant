@@ -14,9 +14,16 @@ namespace RestaurantSimulation_3
             }
         }
         IMenuItem[] singleRequest = new IMenuItem[0];
-        public void Add()
-        { 
-        
+        public void Add(int customer, IMenuItem item)
+        {
+            Array.Resize(ref singleRequest, singleRequest.Length + 1);
+            singleRequest[singleRequest.Length - 1] = item;
+            if (item is Drink)
+            {
+                Array.Resize(ref requests, requests.Length + 1);
+                requests[requests.Length - 1] = singleRequest;
+                singleRequest = new IMenuItem[0];
+            }
         }
     }
 }
