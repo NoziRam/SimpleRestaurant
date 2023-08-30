@@ -1,5 +1,6 @@
 ﻿using System;
 using RestaurantSimulation_3.MenuItems;
+using RestaurantSimulation_3.MenuItems.Foods;
 
 namespace RestaurantSimulation_3
 {
@@ -25,5 +26,36 @@ namespace RestaurantSimulation_3
                 singleRequest = new IMenuItem[0];
             }
         }
+        public IMenuItem[] this[IMenuItem food]
+        {
+            get 
+            {
+                IMenuItem[] returnOrders = new IMenuItem[0];
+                foreach (var request in requests)
+                {
+                    foreach (var item in request)
+                    {
+                        if (item is Chicken && food is Chicken)
+                        {
+                            Array.Resize(ref returnOrders, returnOrders.Length + 1);
+                            returnOrders[returnOrders.Length - 1] = item;
+                        }
+                        else if (item is Egg && food is Egg)
+                        {
+                            Array.Resize(ref returnOrders, returnOrders.Length + 1);
+                            returnOrders[returnOrders.Length - 1] = item;
+                        }
+                    }
+                }
+                return returnOrders;
+            }
+           
+        }
+        public IMenuItem[] this[int index]
+        {
+            get { return requests[index]; }
+            
+        }
+
     }
 }
