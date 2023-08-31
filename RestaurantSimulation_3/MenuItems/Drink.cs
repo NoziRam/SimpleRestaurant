@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantSimulation_3.MenuItems
 {
-    class Drink
+   public abstract class Drink : IMenuItem
     {
     }
 }
