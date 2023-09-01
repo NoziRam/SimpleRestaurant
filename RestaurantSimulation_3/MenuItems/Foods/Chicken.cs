@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace RestaurantSimulation_3.MenuItems.Foods
 {
-    class Chicken
+    public class Chicken: CookedFood, IMenuItem
     {
+        public Chicken(int quantity): base(quantity)
+        {
+
+        }
+        public void Obtain() { }
+        public void CutUp() { }    
+        public override void Cook()
+        {
+            
+        }
     }
 }
