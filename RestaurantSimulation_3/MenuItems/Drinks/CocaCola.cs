@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace RestaurantSimulation_3.MenuItems.Drinks
 {
-    class CocaCola
+    public class CocaCola: Drink
     {
+        public override string ToString()
+        {
+            return "CocaCola";
+        }
     }
 }

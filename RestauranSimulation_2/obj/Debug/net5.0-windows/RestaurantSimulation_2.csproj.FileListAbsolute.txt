@@ -15,3 +15,4 @@ C:\Users\Sumsung\source\repos\SimpleRestaurantSimulation\RestauranSimulation_2\o
 C:\Users\Sumsung\source\repos\SimpleRestaurantSimulation\RestauranSimulation_2\obj\Debug\net5.0-windows\ref\RestaurantSimulation_2.dll
 C:\Users\Sumsung\source\repos\SimpleRestaurantSimulation\RestauranSimulation_2\obj\Debug\net5.0-windows\RestaurantSimulation_2.pdb
 C:\Users\Sumsung\source\repos\SimpleRestaurantSimulation\RestauranSimulation_2\obj\Debug\net5.0-windows\RestaurantSimulation_2.genruntimeconfig.cache
+C:\Users\Sumsung\source\repos\SimpleRestaurantSimulation\RestauranSimulation_2\obj\Debug\net5.0-windows\RestaurantSimulation_2.csproj.AssemblyReference.cache
