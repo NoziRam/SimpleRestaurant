@@ -28,6 +28,11 @@ namespace RestaurantSimulation_3.Employees
             else if (drink == "Pepsi")
                 tableRequests.Add(customerIndex, new Pepsi());
             else tableRequests.Add(customerIndex, new Tea());
+            customerIndex++;
+        
+        }
+        public void SendAll()
+        { 
         
         }
     }

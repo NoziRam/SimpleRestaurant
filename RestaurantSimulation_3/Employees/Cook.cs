@@ -1,12 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RestaurantSimulation_3.MenuItems;
+using RestaurantSimulation_3.MenuItems.Foods;
 
 namespace RestaurantSimulation_3.Employees
 {
-     class Cook
+    public class Cook
     {
+        public void Process(TableRequests tableRequests)
+        {
+            IMenuItem[] chickens = tableRequests[new Chicken(1)];
+            IMenuItem[] eggs = tableRequests[new Egg(1)];
+            foreach (var chicken in chickens)
+            {
+                Chicken ch = (Chicken)chicken;
+                ch.CutUp();
+                ch.Cook();
+            }
+            foreach (var egg in eggs)
+            {
+                Egg egg1 = (Egg)egg;
+                egg1.Crack();
+                egg1.Cook();
+            }
+        
+        }
     }
 }
