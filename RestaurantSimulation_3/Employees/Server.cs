@@ -1,5 +1,6 @@
 ﻿using RestaurantSimulation_3.MenuItems.Foods;
 using RestaurantSimulation_3.MenuItems.Drinks;
+using System.Text;
 
 namespace RestaurantSimulation_3.Employees
 {
@@ -32,8 +33,33 @@ namespace RestaurantSimulation_3.Employees
         
         }
         public void SendAll()
-        { 
-        
+        {
+            cook.Process(tableRequests);
+        }
+        public StringBuilder Serve()
+        {
+            StringBuilder result = new StringBuilder();
+            int counter = 0;
+            for (int i = 0; i < tableRequests.Length; i++)
+            {
+                var request = tableRequests[i];
+                if (request!=null)
+                {
+                    int eggCount = 0;
+                    int chickenCount = 0;
+                    string drinkName = "";
+                    foreach (var item in request)
+                    {
+                        if (item is Egg) eggCount++;
+                        else if (item is Chicken) chickenCount++;
+                        else drinkName = item.ToString();
+                    }
+                    result.Append($"Customer{counter} is served{eggCount} Egg, {chickenCount}Checken and a {drinkName}");
+                    counter++;
+                }
+            }
+            result.Append("Enjoy your meal!!!");
+            return result;
         }
     }
 }
