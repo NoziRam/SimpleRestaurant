@@ -6,7 +6,7 @@ namespace RestaurantSimulation_3
 {
     public class TableRequests
     {
-        IMenuItem [][] requests = new IMenuItem[8][];
+        IMenuItem [][] requests = new IMenuItem[0][];
         public int Length
         { 
             get
