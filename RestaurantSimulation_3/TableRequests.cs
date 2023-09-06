@@ -23,6 +23,7 @@ namespace RestaurantSimulation_3
             {
                 Array.Resize(ref requests, requests.Length + 1);
                 requests[requests.Length - 1] = singleRequest;
+               
                 singleRequest = new IMenuItem[0];
             }
         }
